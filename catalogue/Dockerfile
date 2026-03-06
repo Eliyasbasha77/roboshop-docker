@@ -5,6 +5,7 @@ COPY *.js .
 # this may add extra cache memory
 RUN npm install
 
+
 FROM node:20.19.5-alpine3.21
 # create a user and group
 WORKDIR /opt/server
@@ -20,6 +21,7 @@ COPY --from=build --chown=roboshop:roboshop /opt/server /opt/server
 USER roboshop
 CMD ["server.js"]
 ENTRYPOINT ["node"]
+    
     
 
 # FROM node:20
