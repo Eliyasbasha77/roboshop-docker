@@ -33,7 +33,7 @@ ENV CART_HOST="cart" \
     AMQP_USER="roboshop" \
     AMQP_PASS="roboshop123"
 # Copy installed packages from builder
-COPY --from=builder --chown=roboshop:roboshop /install /usr/local/bin
+COPY --from=builder /install /usr/local
 # Copy app files
 COPY --chown=roboshop:roboshop payment.ini *.py requirements.txt .
 # ENV CART_HOST="cart" \
