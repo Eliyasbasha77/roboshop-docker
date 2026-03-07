@@ -17,6 +17,7 @@ ENTRYPOINT ["java","-jar","shipping.jar"]
 
 
 
+
 # FROM maven:3.9.11 
 # EXPOSE 8080
 # WORKDIR /opt/server 
